@@ -13,7 +13,44 @@
 
 <body>
     <h1 class='transparent' id='title'>元旦快乐</h1>
-    <!-- <h1 contenteditable="true" class='transparent' id='title'>小海星元旦快乐</h1> -->
+    <!-- <h1 contenteditable="true" class='transparent' id='title'>元旦快乐</h1> -->
+
+    <p contenteditable="true" class="transparent" id="intensity">2</p>
+    <p class="transparent" id="hint"><- intensity</p>
+
+
+    <pre class="transparent" id="niuzi">
+     ╱ᵀ￣╲
+    /     \
+  （        ） 
+  /￣⁻⁻⁻￣   \
+ 丨   \       ┃
+  \    \      ┃
+   \    ┃      ┃
+    \    \      ┃
+     \    丨     ┃
+      \    \      ┃
+       \   丨      ┃
+        \   \       ┃
+         \   丨      ┃
+          \    \     ┃
+           \   丨     ┃
+            \   \     ┃
+             \   丨    ┃
+              \   \     ┃
+               \   丨    ┃
+                \   \     ┃
+                 \   丨    ┃
+                  \   \    ┃
+                   \  /     ╲
+                  ╱ \╱       \
+               /    ʸ         \
+             丨     ┊         丨
+               \＿＿ₓ＿＿＿＿＿/
+    </pre>
+    <p class="transparent" id="wishes">新牛大</p>
+
+
     <div id="fireworks"></div>
     <script>
       const container = document.querySelector('#fireworks')
@@ -30,6 +67,17 @@
         }
       })
       fireworks.start()
+
+      const intensityField = document.querySelector("#intensity");
+      intensityField.addEventListener("input", () => {
+        const intensity = parseInt(intensityField.textContent);
+        console.log(`intensity input ${intensity}`);
+        fireworks.updateOptions({
+            mouse: {
+                max: intensity
+            }
+        });
+      });
     </script>
 
     <canvas id="smokeMouseCanvas"></canvas>

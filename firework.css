@@ -35,7 +35,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 20%;
+    top: 40%;
     text-align: center;
     font-size: -webkit-xxx-large;
     font-weight: 900;
@@ -44,4 +44,44 @@ body {
     user-select: none;
     /* -ms-user-select: none;
     -khtml-user-select: none; */
+}
+
+#intensity {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    z-index: 2 !important;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+#hint {
+    position: absolute;
+    left: 6%;
+    bottom: 2%;
+    z-index: 1 !important;
+    font-size: x-large;
+    font-weight: 500;
+    transform: rotate(35deg);
+}
+
+
+#niuzi {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    z-index: 1 !important;
+    display: inline-block;
+    text-align: left;
+    user-select: none;
+}
+
+#wishes {
+    position: absolute;
+    right: 7%;
+    bottom: 1%;
+    z-index: 1 !important;
+    user-select: none;
+    font-size: x-large;
+    font-weight: 500;
 }
